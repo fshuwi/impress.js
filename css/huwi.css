@@ -2,14 +2,32 @@ h1
 {
 	font-weight: bold;
 	font-size: 150%;
+	text-align: center;
 }
 
 h2 {
 	font-size: 100%;
 	margin-bottom: 0.5em;
+	text-align: center;
+}
+
+.description {
+	text-align: center;
+	font-size: 80%;
 }
 
 .image
 {
 	height: 7em;
+	text-align: center;
+}
+
+body {
+	background: black;
+	color: white;
+}
+
+.step {
+	padding: 0;
+	width: 30em;
 }

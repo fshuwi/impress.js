@@ -54,9 +54,11 @@
 	<xsl:variable name="rotate-inc"><xsl:value-of select="../increment/@angle"/></xsl:variable>
 	<xsl:variable name="loop"><xsl:value-of select="../increment/@length"/></xsl:variable>
 
-	<xsl:variable name="data-x" select="position() * $x-inc - floor(position() div $loop) * $loop * $x-inc" />
-	<xsl:variable name="data-y" select="floor((position() - 1) div $loop) * $y-inc" />
-	<xsl:variable name="data-rotate" select="(position() - 1) * $rotate-inc - floor(position() div $loop) * $rotate-inc" />
+	<xsl:variable name="data-x" select="position() * 2000" />
+	<xsl:variable name="data-y" select="0" />
+	<!-- <xsl:variable name="data-y" select="floor((position() - 1) div $loop) * $y-inc" /> -->
+	<!-- <xsl:variable name="data-rotate" select="(position() - 1) * $rotate-inc - floor(position() div $loop) * $rotate-inc" /> -->
+	<xsl:variable name="data-rotate" select="0" />
 
 	<div class="step" data-x="{$data-x}" data-y="{$data-y}" data-rotate="{$data-rotate}"> 
 		<xsl:copy-of select="."/>
