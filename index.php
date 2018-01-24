@@ -53,6 +53,7 @@ foreach($icalobj->tree->child as $node)
 			$dtstart = $node->data['DTSTART']->getValues();
 			$date = strtotime($dtstart);
 			$datestring = date("l, d. F, G:i", $date);
+			$location = $node->data['LOCATION']->getValues();
 			
 			preg_match_all('#\bhttps?://[^,\s()<>]+(?:\([\w\d]+\)|([^,[:punct:]\s]|/))#', $description, $match);
 			
@@ -73,7 +74,7 @@ foreach($icalobj->tree->child as $node)
 			echo "<step>";
 			
 			echo "<h1>".htmlspecialchars($summary, ENT_XML1, 'UTF-8')."</h1>";
-			echo "<h2>".htmlspecialchars($datestring, ENT_XML1, 'UTF-8')."</h2>";
+			echo "<h2>".htmlspecialchars($datestring, ENT_XML1, 'UTF-8')." / ".htmlspecialchars($location, ENT_XML1, 'UTF-8')."</h2>";
 
 			echo "<div class='description'>".nl2br(htmlspecialchars($description, ENT_XML1, 'UTF-8'))."</div>";
 			
