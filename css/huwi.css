@@ -1,0 +1,15 @@
+h1
+{
+	font-weight: bold;
+	font-size: 150%;
+}
+
+h2 {
+	font-size: 100%;
+	margin-bottom: 0.5em;
+}
+
+.image
+{
+	height: 7em;
+}
